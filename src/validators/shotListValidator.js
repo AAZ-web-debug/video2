@@ -4,8 +4,9 @@ const shotSchema = z.object({
   shot_number: z.number().int().positive({ message: 'shot_number must be a positive integer' }),
   visual_description: z.string().min(10, { message: 'visual_description must have at least 10 characters' }),
   narration_text: z.string().min(10, { message: 'narration_text must have at least 10 characters' }),
-  duration_seconds: z.number().int().min(4, { message: 'duration_seconds must be at least 4' }).max(20, { message: 'duration_seconds cannot exceed 20' })
-});
+  duration_seconds: z.number().int().min(4, { message: 'duration_seconds must be at least 4' }).max(20, { message: 'duration_seconds cannot exceed 20' }),
+  visual_metadata: z.any().optional()
+}).passthrough();
 
 const shotListSchema = z.object({
   video_id: z.string().min(3, { message: 'video_id must be at least 3 characters' }),

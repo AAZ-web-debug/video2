@@ -8,57 +8,145 @@
     "shots": [
       {
         "shot_number": 1,
-        "visual_description": "Ada stands beside a wide digital workbench as four scattered data cards float into view with disorganized numbers.",
+        "visual_description": "Four scattered data cards with numbers 10, 20, 30, and 40 float haphazardly across fragmented memory spaces with red dashed boundary lines.",
         "narration_text": "When we work with multiple related values in code, keeping them scattered makes tracking them inefficient.",
-        "duration_seconds": 8
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "what_is_array_scattered",
+          "title": "WHAT IS AN ARRAY?",
+          "subtitle": "The Problem: Scattered & Disorganized Memory",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "DISORGANIZED DATA",
+          "showAda": true
+        }
       },
       {
         "shot_number": 2,
-        "visual_description": "A single continuous memory strip appears on the workbench, divided into four consecutive numbered compartments.",
+        "visual_description": "A single continuous memory strip appears across the center stage, snapping the scattered elements into five adjacent numbered slots.",
         "narration_text": "An array solves this by organizing elements in a contiguous block of memory, placed side by side.",
-        "duration_seconds": 8
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "what_is_array_slots",
+          "title": "WHAT IS AN ARRAY?",
+          "subtitle": "The Solution: Contiguous Memory Allocation",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "CONTIGUOUS MEMORY BLOCK",
+          "showAda": true
+        }
       },
       {
         "shot_number": 3,
-        "visual_description": "A cutaway view shows computer RAM highlighting four adjacent memory cells lighting up with addresses 1000, 1004, 1008, and 1012.",
-        "narration_text": "Because the items sit adjacent to one another in physical RAM, the computer can locate the entire group under one single variable name.",
-        "duration_seconds": 9
+        "visual_description": "Five large array cells light up in indigo with physical memory addresses 0x1000, 0x1004, 0x1008, 0x100C, and 0x1010 displayed directly above each cell.",
+        "narration_text": "Because elements sit in consecutive memory addresses, the computer can manage the entire collection under a single variable name.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "what_is_array_filled",
+          "title": "CONTIGUOUS MEMORY LAYOUT",
+          "subtitle": "Consecutive Hardware Addresses (+4 Bytes Each)",
+          "values": [10, 20, 30, 40, 50],
+          "addresses": ["0x1000", "0x1004", "0x1008", "0x100C", "0x1010"],
+          "badge": "CONSECUTIVE ADDRESSES",
+          "showAda": true
+        }
       },
       {
         "shot_number": 4,
-        "visual_description": "A real-world illustration fades in showing a modern passenger train with numbered carriages attached in unbroken sequence.",
-        "narration_text": "Think of an array like a passenger train: each car holds one item, and every car is linked in an unbroken, predictable line.",
-        "duration_seconds": 8
+        "visual_description": "Zero-based index tags 0, 1, 2, 3, and 4 illuminate in bright cyan underneath each cell with glowing indicator pins.",
+        "narration_text": "Each position is assigned a zero-based index, representing exactly how many steps away it sits from the start.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "what_is_array_indices",
+          "title": "ZERO-BASED INDEXING",
+          "subtitle": "Positions Numbered from 0 to N - 1",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "INDICES: 0, 1, 2, 3, 4",
+          "showAda": true
+        }
       },
       {
         "shot_number": 5,
-        "visual_description": "Ada gestures to the array boxes as values 85, 92, 78, and 95 slide smoothly into boxes 0, 1, 2, and 3.",
-        "narration_text": "Every cell in a typical array stores values of the same type, such as integer test scores.",
-        "duration_seconds": 8
+        "visual_description": "A memory offset visualizer shows Base Address 0x1000 with offset markers measuring 0 steps, 1 step, and 2 steps from the start.",
+        "narration_text": "Index zero means zero offset from the start boundary, which is why array indexing universally starts at zero.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "what_is_array_offsets",
+          "title": "WHY INDEX ZERO?",
+          "subtitle": "Index = Distance Offset from Base Address",
+          "values": [10, 20, 30, 40, 50],
+          "highlightFormula": "Offset = Index × Element_Size",
+          "badge": "INDEX 0 = ZERO OFFSET",
+          "showAda": true
+        }
       },
       {
         "shot_number": 6,
-        "visual_description": "A clean code terminal floats above showing: let scores = [85, 92, 78, 95]; with syntax highlighting matching the visual boxes.",
-        "narration_text": "In our program, we declare this collection once as scores, creating four structured slots ready for immediate use.",
-        "duration_seconds": 9
+        "visual_description": "A visual analogy displays five linked train carriages connected in a straight line, each holding identical data tokens.",
+        "narration_text": "Think of an array like a train with numbered cars: every car is connected in a fixed line, holding elements of the same data type.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "what_is_array_train",
+          "title": "VISUAL ANALOGY: TRAIN CARRIAGES",
+          "subtitle": "Fixed Sequence • Identical Data Types",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "HOMOGENEOUS ELEMENTS",
+          "showAda": true
+        }
       },
       {
         "shot_number": 7,
-        "visual_description": "A magnifying sensor glides across the contiguous cells, showing zero gaps and predictable memory boundary lines.",
-        "narration_text": "Because there are no gaps between cells, modern processors can preload adjacent array values into cache memory very quickly.",
-        "duration_seconds": 9
+        "visual_description": "A glowing code syntax card displays const scores = [10, 20, 30, 40, 50]; with direct color-coded lines pointing into the array cells.",
+        "narration_text": "In code, we declare this sequence with square brackets, instantly allocating five consecutive slots.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "what_is_array_code",
+          "title": "ARRAY DECLARATION IN CODE",
+          "subtitle": "const scores = [10, 20, 30, 40, 50];",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "FIXED ALLOCATION",
+          "showAda": true
+        }
       },
       {
         "shot_number": 8,
-        "visual_description": "A diagram compares the orderly array sequence against scattered memory pointers, emphasizing stability.",
-        "narration_text": "This orderly layout provides predictable performance and forms the backbone of countless algorithms.",
-        "duration_seconds": 8
+        "visual_description": "A cyan CPU cache sweep pulse glides across all five contiguous cells in a single rapid burst, illuminating the whole sequence.",
+        "narration_text": "Because there are zero gaps between items, modern CPU hardware can preload adjacent array elements into fast cache memory.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "what_is_array_cache",
+          "title": "HARDWARE ADVANTAGE",
+          "subtitle": "Fast CPU Cache Prefetching (Spatial Locality)",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "CACHE-FRIENDLY",
+          "showAda": true
+        }
       },
       {
         "shot_number": 9,
-        "visual_description": "Ada steps forward with a summary panel listing: Contiguous Memory, Single Identifier, Homogeneous Elements.",
-        "narration_text": "An array is a fixed-size sequence of elements stored consecutively in memory, giving our data structure and order.",
-        "duration_seconds": 8
+        "visual_description": "Side-by-side comparison diagram compares contiguous array efficiency against scattered memory pointers with jagged delay indicators.",
+        "narration_text": "This continuous layout provides blazing fast performance and serves as the foundation for modern data structures.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "what_is_array_comparison",
+          "title": "ARRAY VS SCATTERED MEMORY",
+          "subtitle": "Predictable Jump vs Erratic Pointer Chasing",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "PREDICTABLE & FAST",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 10,
+        "visual_description": "Ada gestures to a summary card highlighting: 1. Contiguous Memory, 2. Zero-Based Index, 3. Fast O(1) Access.",
+        "narration_text": "In summary, an array is an ordered, indexed, contiguous sequence of elements that gives our data speed and structure.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "what_is_array_summary",
+          "title": "SUMMARY: WHAT IS AN ARRAY?",
+          "subtitle": "Contiguous • Zero-Indexed • Predictable",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "FOUNDATIONAL DATA STRUCTURE",
+          "showAda": true
+        }
       }
     ]
   },
@@ -71,51 +159,157 @@
     "shots": [
       {
         "shot_number": 1,
-        "visual_description": "Ada points to an array of five blue memory cells containing values 14, 28, 35, 42, and 56.",
-        "narration_text": "To retrieve an element from an array, we do not need to inspect every item from the beginning.",
-        "duration_seconds": 8
+        "visual_description": "A prominent central array displays five cells [10] [20] [30] [40] [50] with clear index labels 0, 1, 2, 3, 4.",
+        "narration_text": "To retrieve an element from an array, computers do not need to scan through items one by one.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_intro",
+          "title": "INDEX-BASED ACCESS",
+          "subtitle": "Direct Memory Lookup",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "RANDOM ACCESS",
+          "showAda": true
+        }
       },
       {
         "shot_number": 2,
-        "visual_description": "Numerical tags 0, 1, 2, 3, and 4 light up underneath the corresponding cells from left to right.",
-        "narration_text": "Instead, each cell is assigned a zero-based index representing its exact position.",
-        "duration_seconds": 9
+        "visual_description": "Glowing numerical badges 0, 1, 2, 3, and 4 light up beneath the cells with downward pointer arrows.",
+        "narration_text": "Instead, every element occupies an exact numeric index starting from zero.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_indices",
+          "title": "ZERO-BASED POSITIONS",
+          "subtitle": "Array Indices Start at Index 0",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "INDICES: 0 TO 4",
+          "showAda": true
+        }
       },
       {
         "shot_number": 3,
-        "visual_description": "A visual callout zooms into the first cell at index 0, showing an offset arrow of length zero from the start boundary.",
-        "narration_text": "We start counting at zero because the first item has an offset of zero steps from the start of the array.",
-        "duration_seconds": 9
+        "visual_description": "An access request card appears: array[2] with a target focus bracket over index 2 containing value 30.",
+        "narration_text": "Suppose our program requests scores at index two. Let us see how the hardware locates it instantly.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_target",
+          "title": "TARGET OPERATION: array[2]",
+          "subtitle": "Accessing Element at Index 2",
+          "values": [10, 20, 30, 40, 50],
+          "pointerIndex": 2,
+          "pointerLabel": "Target Index: 2",
+          "badge": "LOOKUP: array[2]",
+          "showAda": true
+        }
       },
       {
         "shot_number": 4,
-        "visual_description": "A memory calculation overlay shows: address = base_address + (index * 4 bytes). Cell 2 illuminates instantly.",
-        "narration_text": "To find element at index two, the computer multiplies two by the item size and jumps straight to that memory address.",
-        "duration_seconds": 9
+        "visual_description": "Base Address 0x1000 highlights at index 0, and the memory formula appears: Address = Base + (Index * Size).",
+        "narration_text": "The computer knows the array starts at base address 0x1000 in memory.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_base",
+          "title": "BASE ADDRESS CALCULATION",
+          "subtitle": "Base Address = 0x1000 (Index 0)",
+          "values": [10, 20, 30, 40, 50],
+          "pointerIndex": 0,
+          "pointerLabel": "Base: 0x1000",
+          "highlightFormula": "Address = Base + (Index × 4 bytes)",
+          "badge": "BASE = 0x1000",
+          "showAda": true
+        }
       },
       {
         "shot_number": 5,
-        "visual_description": "A clean code snippet displays: let value = scores[2]; followed by the value 35 popping out of cell 2.",
-        "narration_text": "In code, writing scores at index two gives us the value thirty-five immediately.",
-        "duration_seconds": 9
+        "visual_description": "A calculation beam leaps directly from 0x1000 to index 2: 0x1000 + (2 * 4) = 0x1008 in one single calculation.",
+        "narration_text": "By multiplying the index two by four bytes, the hardware jumps directly to address 0x1008 in a single calculation.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_math",
+          "title": "DIRECT ADDRESS JUMP",
+          "subtitle": "0x1000 + (2 × 4) = 0x1008",
+          "values": [10, 20, 30, 40, 50],
+          "pointerIndex": 2,
+          "pointerLabel": "Target: 0x1008",
+          "highlightFormula": "0x1000 + 8 bytes = 0x1008",
+          "badge": "SINGLE STEP JUMP",
+          "showAda": true
+        }
       },
       {
         "shot_number": 6,
-        "visual_description": "A digital stopwatch icon shows O(1) time complexity as pointers jump directly to index 0, index 4, and index 1 without steps in between.",
-        "narration_text": "Whether an array holds five items or five million, jumping directly to any index takes the same single calculation.",
-        "duration_seconds": 9
+        "visual_description": "Cell 2 [30] illuminates with an intense electric cyan border and glowing pulse arrow: Downward arrow into cell 2.",
+        "narration_text": "Cell index two is selected immediately, without checking index zero or index one.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_highlight",
+          "title": "CELL INDEX 2 SELECTED",
+          "subtitle": "No Need to Check Index 0 or 1",
+          "values": [10, 20, 30, 40, 50],
+          "pointerIndex": 2,
+          "pointerLabel": "Selected: array[2]",
+          "badge": "DIRECT HIT",
+          "showAda": true
+        }
       },
       {
         "shot_number": 7,
-        "visual_description": "Ada smiles beside a glowing O(1) Constant Time badge as the array pulses with instant access indicators.",
-        "narration_text": "This constant time lookup, known as O of one, makes index-based access one of the fastest operations in computer science.",
-        "duration_seconds": 9
+        "visual_description": "Value 30 pops out of cell 2 into a floating result box connected by a glowing line: array[2] returns 30.",
+        "narration_text": "The value thirty is read directly from memory and returned to our application.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_extracted",
+          "title": "VALUE RETRIEVED: 30",
+          "subtitle": "Accessing array[2] → 30",
+          "values": [10, 20, 30, 40, 50],
+          "pointerIndex": 2,
+          "pointerLabel": "Return: 30",
+          "badge": "RESULT: 30",
+          "showAda": true
+        }
       },
       {
         "shot_number": 8,
-        "visual_description": "Summary graphic highlights zero-based index labels and the direct formula: Base Address plus Index times Size.",
-        "narration_text": "Zero-based indexing turns memory lookup into simple arithmetic, providing instantaneous access to any element.",
-        "duration_seconds": 8
+        "visual_description": "A second jump targets index 4 [50] with identical instant speed, demonstrating index access equality.",
+        "narration_text": "Whether accessing index zero or index four, the calculation takes the exact same amount of time.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_equal_time",
+          "title": "EQUAL SPEED FOR ANY INDEX",
+          "subtitle": "array[4] → 50 Takes Identical Time",
+          "values": [10, 20, 30, 40, 50],
+          "pointerIndex": 4,
+          "pointerLabel": "array[4] → 50",
+          "badge": "IDENTICAL SPEED",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 9,
+        "visual_description": "A large glowing badge displays O(1) Constant Time Complexity alongside a flat performance graph.",
+        "narration_text": "This direct calculation gives array access a time complexity of O of one, known as constant time.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_complexity",
+          "title": "TIME COMPLEXITY: O(1)",
+          "subtitle": "Constant Time Lookup Regardless of Array Size",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "O(1) CONSTANT TIME",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 10,
+        "visual_description": "Ada smiles beside the recap formula: Direct Address Arithmetic = Instant O(1) Access.",
+        "narration_text": "Index-based access makes arrays ideal when we need instant retrieval of data at known positions.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "access_summary",
+          "title": "SUMMARY: INSTANT ACCESS",
+          "subtitle": "Address Arithmetic = Instant O(1) Lookup",
+          "values": [10, 20, 30, 40, 50],
+          "badge": "INSTANT RETRIEVAL",
+          "showAda": true
+        }
       }
     ]
   },
@@ -128,57 +322,216 @@
     "shots": [
       {
         "shot_number": 1,
-        "visual_description": "Ada stands next to an array with four active elements [10, 20, 30, 40] and one vacant slot at the end.",
-        "narration_text": "Inserting a new element into an array means placing data into a specific position while keeping memory contiguous.",
-        "duration_seconds": 9
+        "visual_description": "An array of 4 initial elements [10] [20] [30] [40] sits beside one empty capacity slot at index 4.",
+        "narration_text": "Arrays store elements contiguously, which means inserting a new value into the middle requires special care.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "insert_setup",
+          "title": "ARRAY INSERTION",
+          "subtitle": "Initial State: [10, 20, 30, 40, _]",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": "", "index": 4, "state": "empty" }
+          ],
+          "badge": "CAPACITY READY",
+          "showAda": true
+        }
       },
       {
         "shot_number": 2,
-        "visual_description": "A new card with value 50 floats directly into the vacant slot at index 4 without disturbing the other cells.",
-        "narration_text": "When we insert at the end of an array that has available capacity, the item drops into place immediately.",
-        "duration_seconds": 9
+        "visual_description": "A bright card with value 25 hovers above index 2 with a downward dotted arrow: Insert 25 at Index 2.",
+        "narration_text": "Here, we want to insert the value twenty-five at index two, between twenty and thirty.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "insert_goal",
+          "title": "GOAL: INSERT 25 AT INDEX 2",
+          "subtitle": "Insert Value 25 Between 20 and 30",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "active" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": "", "index": 4, "state": "empty" }
+          ],
+          "targetValue": 25,
+          "pointerIndex": 2,
+          "pointerLabel": "Insert Here",
+          "badge": "TARGET: INDEX 2",
+          "showAda": true
+        }
       },
       {
         "shot_number": 3,
-        "visual_description": "A new card with value 25 hovers above index 2, between values 20 and 30. A collision warning icon blinks gently.",
-        "narration_text": "However, inserting into the middle or beginning of an array presents a physical challenge.",
-        "duration_seconds": 9
+        "visual_description": "A red warning barrier flashes over index 2: Cell already holds 30! Cannot overwrite existing data.",
+        "narration_text": "Because index two is already occupied by thirty, we cannot simply write over it without losing data.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "insert_collision",
+          "title": "INDEX 2 IS OCCUPIED!",
+          "subtitle": "Cannot Overwrite 30 Without Data Loss",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "mismatch" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": "", "index": 4, "state": "empty" }
+          ],
+          "badge": "CANNOT OVERWRITE",
+          "showAda": true
+        }
       },
       {
         "shot_number": 4,
-        "visual_description": "Animated arrows show value 40 sliding right into the vacant slot, followed by value 30 sliding right into index 3.",
-        "narration_text": "Because array cells cannot overlap, every element to the right of the target position must shift one spot to the right.",
-        "duration_seconds": 9
+        "visual_description": "Element 40 at index 3 shifts right into empty slot 4 with a prominent animated shift arrow: Shift Right.",
+        "narration_text": "To create space, we must shift the existing elements to the right, starting from the very end.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "insert_shift_step1",
+          "title": "STEP 1: SHIFT FROM THE END",
+          "subtitle": "Shift 40 Right (Index 3 → Index 4)",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "moving", "shiftDirection": "right" },
+            { "value": "", "index": 4, "state": "empty" }
+          ],
+          "shiftArrow": { "from": 3, "to": 4, "label": "Shift 40 →" },
+          "badge": "SHIFT RIGHT: 40",
+          "showAda": true
+        }
       },
       {
         "shot_number": 5,
-        "visual_description": "Cell at index 2 is now clear and highlighted in glowing cyan as card 25 smoothly glides down into place.",
-        "narration_text": "Once the space at index two is open, our new value twenty-five seats firmly into the vacated compartment.",
-        "duration_seconds": 9
+        "visual_description": "The array now shows 40 safely in slot 4, leaving slot 3 open. An arrow prepares on cell 2.",
+        "narration_text": "First, forty moves from index three to index four, freeing up index three.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "insert_shift_step2_ready",
+          "title": "INDEX 4 OCCUPIED • INDEX 3 VACANT",
+          "subtitle": "Now Index 3 Is Ready to Receive Next Element",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "active" },
+            { "value": "", "index": 3, "state": "gap" },
+            { "value": 40, "index": 4, "state": "normal" }
+          ],
+          "badge": "SLOT 3 OPEN",
+          "showAda": true
+        }
       },
       {
         "shot_number": 6,
-        "visual_description": "The completed array [10, 20, 25, 30, 40] glows with updated indices 0 through 4.",
-        "narration_text": "The resulting array remains perfectly contiguous, with the total number of elements increased by one.",
-        "duration_seconds": 9
+        "visual_description": "Element 30 at index 2 shifts right into index 3 with another prominent animated shift arrow.",
+        "narration_text": "Next, thirty shifts from index two to index three. Now, index two is completely open!",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "insert_shift_step2",
+          "title": "STEP 2: SHIFT 30 RIGHT",
+          "subtitle": "Shift 30 Right (Index 2 → Index 3)",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "moving", "shiftDirection": "right" },
+            { "value": "", "index": 3, "state": "gap" },
+            { "value": 40, "index": 4, "state": "normal" }
+          ],
+          "shiftArrow": { "from": 2, "to": 3, "label": "Shift 30 →" },
+          "badge": "SHIFT RIGHT: 30",
+          "showAda": true
+        }
       },
       {
         "shot_number": 7,
-        "visual_description": "A worst-case scenario animation shows insertion at index 0 where all five elements must shift right step by step.",
-        "narration_text": "In the worst case, inserting at index zero forces every single existing element to shift, taking O of n time.",
-        "duration_seconds": 9
+        "visual_description": "Cell 2 is now a glowing cyan dashed vacancy: [ OPEN GAP ] between values 20 and 30.",
+        "narration_text": "A clean vacancy has been created at index two, preserving all existing items.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "insert_gap_open",
+          "title": "GAP CREATED AT INDEX 2",
+          "subtitle": "Array Prepared for New Value",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": "+", "index": 2, "state": "gap" },
+            { "value": 30, "index": 3, "state": "normal" },
+            { "value": 40, "index": 4, "state": "normal" }
+          ],
+          "badge": "VACANCY READY",
+          "showAda": true
+        }
       },
       {
         "shot_number": 8,
-        "visual_description": "Ada displays a split comparison: End insertion is O(1), Middle/Front insertion requires element shifts O(n).",
-        "narration_text": "Remember: end insertion is instantaneous, but middle insertion requires shifting elements to preserve memory continuity.",
-        "duration_seconds": 9
+        "visual_description": "New card with value 25 descends smoothly into index 2 with an energetic cyan placement trail.",
+        "narration_text": "Now, the new value twenty-five drops directly into index two, completing the insertion.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "insert_drop",
+          "title": "STEP 3: INSERT VALUE 25",
+          "subtitle": "Value 25 Placed Into Vacated Index 2",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 25, "index": 2, "state": "match" },
+            { "value": 30, "index": 3, "state": "normal" },
+            { "value": 40, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 2,
+          "pointerLabel": "Inserted 25",
+          "badge": "INSERT 25",
+          "showAda": true
+        }
       },
       {
         "shot_number": 9,
-        "visual_description": "Summary checklist flashes: Contiguous Memory Maintained, Right Shifts Required, Length Increments by One.",
-        "narration_text": "Understanding element shifting helps you anticipate when an array insertion is efficient and when it carries extra work.",
-        "duration_seconds": 8
+        "visual_description": "The completed array [10, 20, 25, 30, 40] glows in emerald green with green checkmark: Insertion Complete.",
+        "narration_text": "The array is now fully updated, retaining contiguous order without any gaps.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "insert_complete",
+          "title": "INSERTION COMPLETE",
+          "subtitle": "Contiguous Order Preserved: [10, 20, 25, 30, 40]",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 25, "index": 2, "state": "match" },
+            { "value": 30, "index": 3, "state": "normal" },
+            { "value": 40, "index": 4, "state": "normal" }
+          ],
+          "badge": "SUCCESS ✓",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 10,
+        "visual_description": "Worst-case animation shows inserting at index 0 where all N elements must shift right step by step: O(N) Linear Time.",
+        "narration_text": "Because inserting at the beginning forces all N elements to shift right, array insertion takes O of N linear time in the worst case.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "insert_worst_case",
+          "title": "WORST CASE: O(N) LINEAR TIME",
+          "subtitle": "Inserting at Index 0 Shifts All N Elements",
+          "badge": "O(N) SHIFT COST",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 11,
+        "visual_description": "Ada displays summary card: 1. Shift Right, 2. Insert Value, 3. O(N) Time Complexity in Worst Case.",
+        "narration_text": "Inserting into an array requires shifting elements right to make room, maintaining contiguous memory.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "insert_summary",
+          "title": "SUMMARY: ARRAY INSERTION",
+          "subtitle": "Shift Right • Preserve Contiguity • O(N)",
+          "badge": "SHIFT COST = O(N)",
+          "showAda": true
+        }
       }
     ]
   },
@@ -191,57 +544,192 @@
     "shots": [
       {
         "shot_number": 1,
-        "visual_description": "Ada presents an array containing five numbers [12, 24, 36, 48, 60] with indices 0 through 4 clearly labeled.",
+        "visual_description": "A full 5-element array [10] [20] [30] [40] [50] is displayed with indices 0 through 4.",
         "narration_text": "Deleting an element removes a value from the array, but arrays cannot leave empty holes in memory.",
-        "duration_seconds": 8
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "delete_setup",
+          "title": "ARRAY DELETION",
+          "subtitle": "Initial Array: [10, 20, 30, 40, 50]",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "badge": "INITIAL ARRAY",
+          "showAda": true
+        }
       },
       {
         "shot_number": 2,
-        "visual_description": "The card at index 1 with value 24 turns translucent and lifts out of the array, leaving an empty vacant slot.",
-        "narration_text": "Suppose we delete the element at index one. The value twenty-four is removed, creating a void in our sequence.",
-        "duration_seconds": 8
+        "visual_description": "Cell 2 [30] is highlighted with a vivid red target circle: Delete Index 2 (Value 30).",
+        "narration_text": "Suppose we want to delete the element at index two, which currently contains the value thirty.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "delete_target",
+          "title": "TARGET TO DELETE: INDEX 2",
+          "subtitle": "Removing Value 30 at Index 2",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "mismatch" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 2,
+          "pointerLabel": "Delete Target",
+          "badge": "DELETE: INDEX 2",
+          "showAda": true
+        }
       },
       {
         "shot_number": 3,
-        "visual_description": "A hazard symbol pulses over the empty cell at index 1, emphasizing broken continuity.",
-        "narration_text": "Because an array must remain contiguous, this empty gap violates the rules of the data structure.",
-        "duration_seconds": 9
+        "visual_description": "Value 30 turns translucent and lifts out of the array with a red cross: REMOVE 30.",
+        "narration_text": "The target element thirty is removed from the array.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "delete_remove",
+          "title": "VALUE 30 REMOVED",
+          "subtitle": "Element Evacuated From Cell 2",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": "", "index": 2, "state": "gap" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "badge": "ELEMENT REMOVED",
+          "showAda": true
+        }
       },
       {
         "shot_number": 4,
-        "visual_description": "Animated blue arrows show value 36 sliding left from index 2 into index 1, then value 48 sliding into index 2, and 60 into index 3.",
-        "narration_text": "To repair the continuity, every element to the right of the deleted item shifts left by one position.",
-        "duration_seconds": 9
+        "visual_description": "A hazard warning symbol flashes over the empty cell at index 2: Gaps are not permitted in contiguous memory.",
+        "narration_text": "This leaves an empty hole at index two. Since arrays must stay contiguous, we cannot leave this gap.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "delete_gap_warning",
+          "title": "CONTIGUITY VIOLATION!",
+          "subtitle": "Arrays Cannot Have Gaps in Memory",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": "GAP", "index": 2, "state": "mismatch" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "badge": "HOLE MUST BE CLOSED",
+          "showAda": true
+        }
       },
       {
         "shot_number": 5,
-        "visual_description": "The gap is fully closed, and the trailing unused slot at the end is cleared and marked as inactive.",
-        "narration_text": "The trailing position at the end is cleared, and the array length is officially reduced by one.",
-        "duration_seconds": 8
+        "visual_description": "Animated blue arrow shows element 40 at index 3 sliding left into index 2: Shift Left.",
+        "narration_text": "To close the gap, elements to the right must shift left. Forty moves from index three to index two.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "delete_shift_step1",
+          "title": "STEP 1: SHIFT 40 LEFT",
+          "subtitle": "Shift 40 From Index 3 → Index 2",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 40, "index": 2, "state": "moving", "shiftDirection": "left" },
+            { "value": "", "index": 3, "state": "gap" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "shiftArrow": { "from": 3, "to": 2, "label": "← Shift 40" },
+          "badge": "SHIFT LEFT: 40",
+          "showAda": true
+        }
       },
       {
         "shot_number": 6,
-        "visual_description": "The updated array [12, 36, 48, 60] glows steadily with indices renumbered 0, 1, 2, and 3.",
-        "narration_text": "The remaining values now form an unbroken, contiguous sequence ready for subsequent operations.",
-        "duration_seconds": 9
+        "visual_description": "Animated blue arrow shows element 50 at index 4 sliding left into index 3: Shift Left.",
+        "narration_text": "Next, fifty moves from index four to index three, filling the vacated slot.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "delete_shift_step2",
+          "title": "STEP 2: SHIFT 50 LEFT",
+          "subtitle": "Shift 50 From Index 4 → Index 3",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 40, "index": 2, "state": "normal" },
+            { "value": 50, "index": 3, "state": "moving", "shiftDirection": "left" },
+            { "value": "", "index": 4, "state": "gap" }
+          ],
+          "shiftArrow": { "from": 4, "to": 3, "label": "← Shift 50" },
+          "badge": "SHIFT LEFT: 50",
+          "showAda": true
+        }
       },
       {
         "shot_number": 7,
-        "visual_description": "Ada illustrates deleting the last element [60] directly without any shifting needed, showing O(1) time badge.",
-        "narration_text": "Deleting the last element requires no shifts at all, running in O of one constant time.",
-        "duration_seconds": 8
+        "visual_description": "The trailing position at index 4 is cleared and grayed out. Array length shrinks from 5 to 4.",
+        "narration_text": "The trailing position at the end is cleared, and the array length is officially reduced by one.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "delete_trailing_cleared",
+          "title": "TRAILING CELL CLEARED",
+          "subtitle": "Array Length Decremented: 5 → 4 Elements",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 40, "index": 2, "state": "normal" },
+            { "value": 50, "index": 3, "state": "normal" },
+            { "value": "-", "index": 4, "state": "empty" }
+          ],
+          "badge": "LENGTH = 4",
+          "showAda": true
+        }
       },
       {
         "shot_number": 8,
-        "visual_description": "A time complexity gauge highlights deleting the first element: shifting all n elements left requires O(n) linear time.",
-        "narration_text": "However, removing the first element requires shifting every remaining item, making front deletion an O of n operation.",
-        "duration_seconds": 8
+        "visual_description": "The updated array [10, 20, 40, 50] glows steadily in emerald green with renumbered indices 0 through 3.",
+        "narration_text": "The remaining values now form an unbroken, contiguous sequence ready for subsequent operations.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "delete_complete",
+          "title": "DELETION COMPLETE",
+          "subtitle": "Final Array: [10, 20, 40, 50] ✓",
+          "array": [
+            { "value": 10, "index": 0, "state": "match" },
+            { "value": 20, "index": 1, "state": "match" },
+            { "value": 40, "index": 2, "state": "match" },
+            { "value": 50, "index": 3, "state": "match" }
+          ],
+          "badge": "GAP RESOLVED ✓",
+          "showAda": true
+        }
       },
       {
         "shot_number": 9,
-        "visual_description": "Ada concludes with a key takeaway card: Deletion removes data, left shifts restore order, array size decrements.",
+        "visual_description": "Time complexity diagram highlights front deletion: deleting at index 0 shifts all remaining N-1 elements left (O(N) Linear Time).",
+        "narration_text": "In the worst case, deleting from the start requires shifting every remaining item, giving deletion an O of N time complexity.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "delete_worst_case",
+          "title": "WORST CASE: O(N) LINEAR TIME",
+          "subtitle": "Deleting Front Element Shifts All Remaining Items",
+          "badge": "O(N) SHIFT COST",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 10,
+        "visual_description": "Ada concludes with takeaway card: Remove Element, Shift Left to Close Gap, Array Size Decrements.",
         "narration_text": "Deleting from an array always requires closing the gap through left shifting to preserve contiguous memory.",
-        "duration_seconds": 8
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "delete_summary",
+          "title": "SUMMARY: ARRAY DELETION",
+          "subtitle": "Shift Left • Close Gap • O(N) Worst Case",
+          "badge": "CONTIGUITY MAINTAINED",
+          "showAda": true
+        }
       }
     ]
   },
@@ -254,51 +742,208 @@
     "shots": [
       {
         "shot_number": 1,
-        "visual_description": "Ada stands before an array of six temperatures [68, 72, 75, 71, 69, 74] lined up in clean digital cells.",
-        "narration_text": "Traversal means visiting every element in an array one by one in a systematic order.",
-        "duration_seconds": 9
+        "visual_description": "An array of 5 elements [10] [20] [30] [40] [50] is displayed with loop header: for (let i = 0; i < 5; i++).",
+        "narration_text": "Array traversal means visiting and processing every element in the array exactly once, in sequential order.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "traverse_intro",
+          "title": "ARRAY TRAVERSAL",
+          "subtitle": "for (let i = 0; i < 5; i++)",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "badge": "SEQUENTIAL ITERATION",
+          "showAda": true
+        }
       },
       {
         "shot_number": 2,
-        "visual_description": "A glowing cursor pointer labeled 'i = 0' points to the first cell containing value 68.",
+        "visual_description": "A pointer arrow labeled 'i = 0' points to cell 0 [10]. Cell 0 illuminates with an electric cyan border.",
         "narration_text": "We begin at index zero, initializing our loop counter to point to the first compartment.",
-        "duration_seconds": 9
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "traverse_i0",
+          "title": "START AT INDEX 0",
+          "subtitle": "i = 0 • Inspecting First Element (10)",
+          "array": [
+            { "value": 10, "index": 0, "state": "active" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 0,
+          "pointerLabel": "i = 0",
+          "badge": "VISIT: arr[0]",
+          "showAda": true
+        }
       },
       {
         "shot_number": 3,
-        "visual_description": "The cursor smoothly steps from cell 0 to cell 1, then cell 2, each cell glowing cyan as it is read.",
-        "narration_text": "On each step of the loop, our program inspects the current value, performs an action, and advances the pointer.",
-        "duration_seconds": 9
+        "visual_description": "Cell 0 is processed with a green checkmark ✓: Value 10 printed to console.",
+        "narration_text": "We process the value ten. Cell zero is now visited and marked complete.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "traverse_i0_done",
+          "title": "PROCESSED arr[0] = 10",
+          "subtitle": "Cell 0 Completed ✓",
+          "array": [
+            { "value": 10, "index": 0, "state": "match" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 0,
+          "pointerLabel": "Processed 10 ✓",
+          "badge": "1 / 5 COMPLETE",
+          "showAda": true
+        }
       },
       {
         "shot_number": 4,
-        "visual_description": "A code window displays: for (let i = 0; i < arr.length; i++) { process(arr[i]); } with active line highlighting.",
-        "narration_text": "This standard loop continues advancing as long as the index is strictly less than the total array length.",
-        "duration_seconds": 9
+        "visual_description": "The pointer advances: i = 1. Cell 1 [20] illuminates in bright cyan while cell 0 stays softly checked.",
+        "narration_text": "The loop counter increments to one. The pointer advances to cell one, containing twenty.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "traverse_i1",
+          "title": "INCREMENT: i = 1",
+          "subtitle": "Inspecting Element at Index 1 (20)",
+          "array": [
+            { "value": 10, "index": 0, "state": "visited" },
+            { "value": 20, "index": 1, "state": "active" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 1,
+          "pointerLabel": "i = 1",
+          "badge": "VISIT: arr[1]",
+          "showAda": true
+        }
       },
       {
         "shot_number": 5,
-        "visual_description": "A running total counter updates dynamically above the array: 68 + 72 + 75 + 71 + 69 + 74 = 429.",
-        "narration_text": "Traversal is essential for tasks like computing sums, formatting output, or filtering matching items.",
-        "duration_seconds": 9
+        "visual_description": "Cell 1 is processed with checkmark ✓. Pointer advances to index 2: i = 2. Cell 2 [30] illuminates.",
+        "narration_text": "Twenty is processed. Next, the pointer advances to index two, highlighting the value thirty.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "traverse_i2",
+          "title": "INCREMENT: i = 2",
+          "subtitle": "Inspecting Element at Index 2 (30)",
+          "array": [
+            { "value": 10, "index": 0, "state": "visited" },
+            { "value": 20, "index": 1, "state": "visited" },
+            { "value": 30, "index": 2, "state": "active" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 2,
+          "pointerLabel": "i = 2",
+          "badge": "VISIT: arr[2]",
+          "showAda": true
+        }
       },
       {
         "shot_number": 6,
-        "visual_description": "The pointer reaches index 5, processes 74, and pauses at the final boundary without stepping out of bounds.",
-        "narration_text": "Once the final valid index is processed, the loop condition evaluates to false and iteration stops gracefully.",
-        "duration_seconds": 9
+        "visual_description": "Cell 2 is processed with checkmark ✓. Pointer advances to index 3: i = 3. Cell 3 [40] illuminates.",
+        "narration_text": "Index two is processed. The traversal marches forward across contiguous memory without skipping any item.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "traverse_i3",
+          "title": "INCREMENT: i = 3",
+          "subtitle": "Inspecting Element at Index 3 (40)",
+          "array": [
+            { "value": 10, "index": 0, "state": "visited" },
+            { "value": 20, "index": 1, "state": "visited" },
+            { "value": 30, "index": 2, "state": "visited" },
+            { "value": 40, "index": 3, "state": "active" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 3,
+          "pointerLabel": "i = 3",
+          "badge": "VISIT: arr[3]",
+          "showAda": true
+        }
       },
       {
         "shot_number": 7,
-        "visual_description": "A timeline metric appears displaying Linear Time Complexity: O(n), where n equals the number of elements.",
-        "narration_text": "Because each of the n elements is visited exactly once, array traversal has a time complexity of O of n.",
-        "duration_seconds": 9
+        "visual_description": "Pointer advances to final element: i = 4. Cell 4 [50] illuminates in electric cyan.",
+        "narration_text": "Finally, the pointer reaches index four, processing the last value, fifty.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "traverse_i4",
+          "title": "LAST ELEMENT: i = 4",
+          "subtitle": "Inspecting Final Element at Index 4 (50)",
+          "array": [
+            { "value": 10, "index": 0, "state": "visited" },
+            { "value": 20, "index": 1, "state": "visited" },
+            { "value": 30, "index": 2, "state": "visited" },
+            { "value": 40, "index": 3, "state": "visited" },
+            { "value": 50, "index": 4, "state": "active" }
+          ],
+          "pointerIndex": 4,
+          "pointerLabel": "i = 4 (Final)",
+          "badge": "VISIT: arr[4]",
+          "showAda": true
+        }
       },
       {
         "shot_number": 8,
-        "visual_description": "Ada points to a summary card showing: Start at 0, Advance Sequentially, Stop at Length minus 1.",
-        "narration_text": "Traversal is the foundational pattern behind searching, sorting, and transforming array data.",
-        "duration_seconds": 9
+        "visual_description": "Cell 4 receives a checkmark ✓. All 5 cells now display green checkmarks with 100% progress bar.",
+        "narration_text": "All five items have been processed in sequential order from index zero to index four.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "traverse_i4_done",
+          "title": "ALL 5 ELEMENTS VISITED",
+          "subtitle": "Complete Sequential Coverage ✓",
+          "array": [
+            { "value": 10, "index": 0, "state": "match" },
+            { "value": 20, "index": 1, "state": "match" },
+            { "value": 30, "index": 2, "state": "match" },
+            { "value": 40, "index": 3, "state": "match" },
+            { "value": 50, "index": 4, "state": "match" }
+          ],
+          "badge": "100% VISITED ✓",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 9,
+        "visual_description": "Loop termination check displays: i = 5 is not less than 5. Iteration halts cleanly.",
+        "narration_text": "The loop condition terminates because i reaches the array length. All five items have been successfully visited.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "traverse_terminated",
+          "title": "LOOP TERMINATED",
+          "subtitle": "i = 5 evaluates (5 < 5) to FALSE → Exit Loop",
+          "array": [
+            { "value": 10, "index": 0, "state": "match" },
+            { "value": 20, "index": 1, "state": "match" },
+            { "value": 30, "index": 2, "state": "match" },
+            { "value": 40, "index": 3, "state": "match" },
+            { "value": 50, "index": 4, "state": "match" }
+          ],
+          "badge": "SAFE TERMINATION",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 10,
+        "visual_description": "Ada stands next to linear time complexity badge: O(N) Linear Time (N elements = N steps).",
+        "narration_text": "Because each of the N elements is visited exactly once, array traversal runs in O of N linear time.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "traverse_summary",
+          "title": "TIME COMPLEXITY: O(N)",
+          "subtitle": "Visiting N Elements Requires Exactly N Operations",
+          "badge": "O(N) LINEAR TIME",
+          "showAda": true
+        }
       }
     ]
   },
@@ -311,57 +956,230 @@
     "shots": [
       {
         "shot_number": 1,
-        "visual_description": "Ada stands next to an unsorted array of numbers [45, 12, 89, 34, 67, 23] with a target display showing Target = 34.",
-        "narration_text": "Searching an array means locating the exact index of a target value or determining if it exists at all.",
-        "duration_seconds": 8
+        "visual_description": "An array of 5 numbers [10] [20] [30] [40] [50] appears with a prominent search badge: Target = 40.",
+        "narration_text": "Linear search finds a target value in an array by inspecting elements one by one from left to right.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_intro",
+          "title": "LINEAR SEARCH",
+          "subtitle": "Target Value to Find: 40",
+          "array": [
+            { "value": 10, "index": 0, "state": "normal" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "targetValue": 40,
+          "badge": "TARGET: 40",
+          "showAda": true
+        }
       },
       {
         "shot_number": 2,
-        "visual_description": "A digital search probe hovers over index 0 containing 45. A red 'Not Equal' symbol flashes softly.",
-        "narration_text": "In a linear search, we check elements one by one starting at index zero, comparing each value to our target.",
-        "duration_seconds": 9
+        "visual_description": "The search probe hovers over index 0 containing 10. Comparison card shows: Is arr[0] (10) == 40?",
+        "narration_text": "We begin searching at index zero, comparing the first element, ten, with our target forty.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_check0",
+          "title": "CHECK INDEX 0: 10 == 40 ?",
+          "subtitle": "Comparing arr[0] with Target (40)",
+          "array": [
+            { "value": 10, "index": 0, "state": "active" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 0,
+          "pointerLabel": "Check: 10 == 40 ?",
+          "targetValue": 40,
+          "badge": "COMPARING",
+          "showAda": true
+        }
       },
       {
         "shot_number": 3,
-        "visual_description": "The probe moves to index 1 containing 12. A comparison check shows: 12 is not equal to 34, so the probe advances.",
-        "narration_text": "If the current item does not match our target, the search pointer advances to the next cell.",
-        "duration_seconds": 9
+        "visual_description": "A red mismatch cross flashes over cell 0: 10 != 40. Subtitle reads: No match. Advance pointer.",
+        "narration_text": "Ten does not equal forty. There is no match, so the search moves to the next position.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_check0_no",
+          "title": "MISMATCH: 10 ≠ 40 ✗",
+          "subtitle": "No Match Found at Index 0 • Moving Next",
+          "array": [
+            { "value": 10, "index": 0, "state": "mismatch" },
+            { "value": 20, "index": 1, "state": "normal" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 0,
+          "pointerLabel": "10 ≠ 40 ✗",
+          "targetValue": 40,
+          "badge": "NO MATCH",
+          "showAda": true
+        }
       },
       {
         "shot_number": 4,
-        "visual_description": "The probe checks index 2 with value 89. Another mismatch triggers advancement to index 3.",
-        "narration_text": "We continue this systematic check across the array until we either find a match or run out of cells.",
-        "duration_seconds": 9
+        "visual_description": "Pointer moves to index 1 containing 20. Comparison card shows: 20 != 40 with a red cross.",
+        "narration_text": "At index one, twenty does not equal forty. Still no match, so we continue forward.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_check1_no",
+          "title": "CHECK INDEX 1: 20 ≠ 40 ✗",
+          "subtitle": "Comparing arr[1] with 40 • No Match",
+          "array": [
+            { "value": 10, "index": 0, "state": "mismatch" },
+            { "value": 20, "index": 1, "state": "mismatch" },
+            { "value": 30, "index": 2, "state": "normal" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 1,
+          "pointerLabel": "20 ≠ 40 ✗",
+          "targetValue": 40,
+          "badge": "NO MATCH",
+          "showAda": true
+        }
       },
       {
         "shot_number": 5,
-        "visual_description": "The probe arrives at index 3 containing 34. The cell lights up in brilliant emerald green with a checkmark.",
-        "narration_text": "At index three, the value matches our target of thirty-four. The search immediately halts and returns index three.",
-        "duration_seconds": 9
+        "visual_description": "Pointer moves to index 2 containing 30. Comparison card shows: 30 != 40 with another red cross.",
+        "narration_text": "At index two, thirty does not equal forty. The search advances once more.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_check2_no",
+          "title": "CHECK INDEX 2: 30 ≠ 40 ✗",
+          "subtitle": "Comparing arr[2] with 40 • No Match",
+          "array": [
+            { "value": 10, "index": 0, "state": "mismatch" },
+            { "value": 20, "index": 1, "state": "mismatch" },
+            { "value": 30, "index": 2, "state": "mismatch" },
+            { "value": 40, "index": 3, "state": "normal" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 2,
+          "pointerLabel": "30 ≠ 40 ✗",
+          "targetValue": 40,
+          "badge": "NO MATCH",
+          "showAda": true
+        }
       },
       {
         "shot_number": 6,
-        "visual_description": "A second scenario appears with Target = 99. The probe rapidly sweeps from index 0 all the way to index 5 without finding 99.",
-        "narration_text": "Now consider searching for ninety-nine. The probe inspects every cell from start to finish without finding a match.",
-        "duration_seconds": 9
+        "visual_description": "Pointer arrives at index 3 containing 40. High-contrast amber comparison card asks: Is 40 == 40?",
+        "narration_text": "At index three, we compare forty with our target forty. They are an exact match!",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_check3_compare",
+          "title": "CHECK INDEX 3: 40 == 40 ?",
+          "subtitle": "Comparing arr[3] with 40...",
+          "array": [
+            { "value": 10, "index": 0, "state": "mismatch" },
+            { "value": 20, "index": 1, "state": "mismatch" },
+            { "value": 30, "index": 2, "state": "mismatch" },
+            { "value": 40, "index": 3, "state": "active" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 3,
+          "pointerLabel": "40 == 40 ?",
+          "targetValue": 40,
+          "badge": "EVALUATING",
+          "showAda": true
+        }
       },
       {
         "shot_number": 7,
-        "visual_description": "An indicator shows: 'Target Not Found: Returned -1' as the probe exits the array boundary.",
-        "narration_text": "When the end of the array is reached with no match, the algorithm returns minus one to signal that the item is absent.",
-        "duration_seconds": 9
+        "visual_description": "Cell 3 bursts into radiant emerald green glow with green checkmark: MATCH FOUND AT INDEX 3!",
+        "narration_text": "Match found! The search succeeds immediately upon locating the target element.",
+        "duration_seconds": 8,
+        "visual_metadata": {
+          "scene_type": "search_match_found",
+          "title": "MATCH FOUND AT INDEX 3! ✓",
+          "subtitle": "arr[3] == 40 Is TRUE",
+          "array": [
+            { "value": 10, "index": 0, "state": "mismatch" },
+            { "value": 20, "index": 1, "state": "mismatch" },
+            { "value": 30, "index": 2, "state": "mismatch" },
+            { "value": 40, "index": 3, "state": "match" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 3,
+          "pointerLabel": "MATCH FOUND ✓",
+          "targetValue": 40,
+          "badge": "TARGET LOCATED",
+          "showAda": true
+        }
       },
       {
         "shot_number": 8,
-        "visual_description": "A complexity chart compares best-case O(1) when target is at index 0 against worst-case O(n) when target is at the end or missing.",
-        "narration_text": "Linear search takes O of one time in the best case, and O of n in the worst case when scanning unsorted data.",
-        "duration_seconds": 8
+        "visual_description": "Return card displays: return 3; with an arrow connecting to cell 3. Search halts early.",
+        "narration_text": "The function immediately returns index three and halts, without needing to check any remaining cells.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_return",
+          "title": "RETURN INDEX 3 • EARLY EXIT",
+          "subtitle": "return 3; No Need to Inspect Index 4",
+          "array": [
+            { "value": 10, "index": 0, "state": "mismatch" },
+            { "value": 20, "index": 1, "state": "mismatch" },
+            { "value": 30, "index": 2, "state": "mismatch" },
+            { "value": 40, "index": 3, "state": "match" },
+            { "value": 50, "index": 4, "state": "normal" }
+          ],
+          "pointerIndex": 3,
+          "pointerLabel": "return 3",
+          "badge": "EARLY RETURN",
+          "showAda": true
+        }
       },
       {
         "shot_number": 9,
-        "visual_description": "Ada steps forward with the Linear Search rule: Check Each Cell, Halt on Match, Return Negative One if Missing.",
-        "narration_text": "Linear search is dependable and requires no sorted order, serving as the simplest search algorithm in computer science.",
-        "duration_seconds": 8
+        "visual_description": "An absent element scenario shows searching for 99: pointer checks all 5 items, reaches the end, and returns -1.",
+        "narration_text": "If the target is not in the array, the search checks every single item and returns negative one.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_not_found",
+          "title": "ABSENT TARGET (e.g. 99)",
+          "subtitle": "Scans All N Elements → Returns -1",
+          "array": [
+            { "value": 10, "index": 0, "state": "mismatch" },
+            { "value": 20, "index": 1, "state": "mismatch" },
+            { "value": 30, "index": 2, "state": "mismatch" },
+            { "value": 40, "index": 3, "state": "mismatch" },
+            { "value": 50, "index": 4, "state": "mismatch" }
+          ],
+          "badge": "RETURN -1 (NOT FOUND)",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 10,
+        "visual_description": "A complexity chart compares best-case O(1) when target is at index 0 against worst-case O(n) when scanning all items.",
+        "narration_text": "Best case complexity is O of one if the target is first, but worst case is O of N when checking all items.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_complexity",
+          "title": "TIME COMPLEXITY: LINEAR SEARCH",
+          "subtitle": "Best Case: O(1) • Worst Case: O(N)",
+          "badge": "O(1) TO O(N)",
+          "showAda": true
+        }
+      },
+      {
+        "shot_number": 11,
+        "visual_description": "Ada steps forward with summary takeaway: Sequential Check, Early Return on Match, O(N) Worst Case.",
+        "narration_text": "Linear search checks items sequentially until the target is found, making it simple and reliable.",
+        "duration_seconds": 7,
+        "visual_metadata": {
+          "scene_type": "search_summary",
+          "title": "SUMMARY: LINEAR SEARCH",
+          "subtitle": "Simple • Reliable • Works on Unsorted Data",
+          "badge": "SEARCH COMPLETE",
+          "showAda": true
+        }
       }
     ]
   }

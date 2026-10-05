@@ -54,7 +54,7 @@ describe('Video Module API Integration', () => {
     const json = await res.json();
     assert.strictEqual(json.success, true);
     assert.strictEqual(json.data.id, 'arrays-what-is-an-array');
-    assert.strictEqual(json.data.shots.length, 9);
+    assert.strictEqual(json.data.shots.length, 10);
     assert.strictEqual(json.data.shots[0].shot_number, 1);
     assert.ok(json.data.shots[0].visual_description);
     assert.ok(json.data.shots[0].narration_text);
