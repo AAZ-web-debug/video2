@@ -1,0 +1,16 @@
+{
+  "id": "char-ada-001",
+  "name": "Ada",
+  "role": "AlgoVerse DSA Guide",
+  "image_path": "/assets/character/ada_guide.svg",
+  "description": "AlgoVerse guide: Inquisitive tech explorer with deep indigo hair tied back, wearing an ultramarine tech-vest over a cyan-piped tunic with glowing light-blue wrist gauntlets and a calm, encouraging expression.",
+  "version": "1.0.0",
+  "palette": {
+    "primary": "#3B82F6",
+    "secondary": "#1E1B4B",
+    "accent": "#06B6D4",
+    "glow": "#38BDF8",
+    "highlight": "#60A5FA",
+    "neutral": "#0F172A"
+  }
+}

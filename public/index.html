@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlgoVerse Video Module | Arrays DSA Learning</title>
+  <meta name="description" content="AlgoVerse Video Module — Production-quality, structured algorithmic video lessons and synchronized animated explanations for Data Structures and Algorithms.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Background Glow FX -->
+  <div class="glow-orb orb-primary" aria-hidden="true"></div>
+  <div class="glow-orb orb-cyan" aria-hidden="true"></div>
+
+  <!-- Header Navigation -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-crest">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-name">AlgoVerse</span>
+          <span class="brand-badge">Person 2 • Video Module</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="topic-pill">
+          <span class="topic-dot"></span>
+          <span class="topic-label">Topic: <strong>Arrays</strong></span>
+        </div>
+        <div id="regenQuotaBadge" class="quota-pill" title="Shared rolling 24-hour limit">
+          <span class="quota-icon">⚡</span>
+          <span id="quotaText">Regenerations: 0 / 3</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- Hero / Module Intro -->
+    <section class="module-hero">
+      <div class="hero-content">
+        <div class="hero-tag">LINEAR DATA STRUCTURES • ARRAYS</div>
+        <h1 class="hero-title">Algorithmic Video Player & Generator</h1>
+        <p class="hero-desc">
+          Structured 60–90s educational videos engineered with strict visual shot lists, contiguous memory models, and Ada's clear instructional guide.
+        </p>
+      </div>
+
+      <!-- Character Card (Shared Reference Sheet) -->
+      <aside class="character-preview-card" id="characterCard">
+        <div class="char-avatar-wrap">
+          <img id="charAvatar" src="/assets/character/ada_guide.svg" alt="Ada - AlgoVerse Guide" width="64" height="64">
+        </div>
+        <div class="char-info">
+          <div class="char-header">
+            <h2 class="char-name" id="charName">Ada</h2>
+            <span class="char-role-badge">Lead Guide</span>
+          </div>
+          <p class="char-desc" id="charDesc">
+            Explorer in indigo tech vest with cyan gauntlets. Calm, instructional demeanor.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Main Workspace Grid: Video Theater & Concept Selector -->
+    <div class="theater-layout">
+      <!-- Left Column: Video Theater -->
+      <section class="video-theater" aria-label="Video Player Stage">
+        <!-- Player Container -->
+        <div class="player-wrapper">
+          <div class="player-screen" id="playerScreen">
+            <!-- Native HTML5 MP4 Video Player -->
+            <video id="html5VideoPlayer" class="html5-video-player" playsinline preload="auto">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Visual Asset Fallback/Preview Frame (SVG / Canvas) -->
+            <div class="visual-viewport hidden" id="visualViewport">
+              <img id="currentVisualFrame" class="visual-frame" src="" alt="Shot visual illustration">
+            </div>
+
+            <!-- Overlay Play Button -->
+            <button id="overlayPlayBtn" class="overlay-play-btn" aria-label="Play Video">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+
+            <!-- Video Status / Source Badge -->
+            <div class="player-badges">
+              <span id="sourceTypeBadge" class="source-badge badge-reference">PRE-MADE VIDEO</span>
+              <span id="shotCounterBadge" class="source-badge badge-shot">SHOT 1 / 9</span>
+            </div>
+
+            <!-- Subtitle / Narration Banner -->
+            <div class="narration-overlay" id="narrationOverlay">
+              <div class="audio-pulse-indicator" id="audioPulse">
+                <span></span><span></span><span></span>
+              </div>
+              <p class="narration-text" id="narrationText">
+                Loading video shot narration...
+              </p>
+            </div>
+          </div>
+
+          <!-- Video Progress Bar -->
+          <div class="timeline-container">
+            <div class="timeline-bar" id="timelineBar">
+              <div class="timeline-fill" id="timelineFill"></div>
+            </div>
+            <div class="time-display">
+              <span id="currentTime">00:00</span>
+              <span id="totalDuration">01:15</span>
+            </div>
+          </div>
+
+          <!-- Player Controls Bar -->
+          <div class="player-controls">
+            <div class="control-group">
+              <button id="prevShotBtn" class="btn-icon" title="Previous Shot" aria-label="Previous Shot">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+              </button>
+              <button id="playPauseBtn" class="btn-control play-btn" aria-label="Toggle Play">
+                <svg id="playIcon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <svg id="pauseIcon" class="hidden" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                <span id="playLabel">Play</span>
+              </button>
+              <button id="nextShotBtn" class="btn-icon" title="Next Shot" aria-label="Next Shot">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+              </button>
+              <button id="voiceToggleBtn" class="btn-icon active" title="Toggle Audio Voice Narration" aria-label="Toggle Voice">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Video Metadata & Action Buttons -->
+            <div class="action-group">
+              <button id="openFeedbackBtn" class="btn-action btn-outline">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>Provide Feedback</span>
+              </button>
+              <button id="regenerateBtn" class="btn-action btn-primary">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                <span>Regenerate (AI)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Info & Shot Breakdown Strip -->
+        <div class="video-meta-card">
+          <div class="meta-header">
+            <div>
+              <h2 id="currentVideoTitle" class="video-title">Understanding Arrays: The Foundation</h2>
+              <div class="meta-tags">
+                <span id="currentVideoConcept" class="tag-pill">Concept: What is an Array?</span>
+                <span id="currentVideoDuration" class="tag-pill">Duration: 75 seconds</span>
+                <span id="currentVideoShots" class="tag-pill">Shots: 9</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shot Carousel / Thumbnails -->
+          <div class="shots-timeline-strip" id="shotsStrip">
+            <!-- Dynamically populated with shot buttons -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Concept Selector & Generation Hub -->
+      <aside class="concept-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-header">
+            <h3 class="sidebar-title">Arrays Concepts</h3>
+            <span class="count-chip">6 Reference Videos</span>
+          </div>
+          <p class="sidebar-subtitle">Select a core concept to watch the reference video or generate a fresh AI version.</p>
+
+          <div class="concept-list" id="conceptList">
+            <!-- Dynamically populated concept cards -->
+          </div>
+        </div>
+
+        <!-- Gateway Recommendation Widget (2 Pre-made + 1 Fresh) -->
+        <div class="sidebar-card gateway-card">
+          <div class="sidebar-header">
+            <h3 class="sidebar-title">Gateway Feed</h3>
+            <span class="badge-mini">2 Pre-made + 1 AI</span>
+          </div>
+          <p class="sidebar-subtitle">Standard AlgoVerse recommendation bundle for Arrays.</p>
+          <div class="gateway-list" id="gatewayList">
+            <!-- Populated via /api/videos/gateway/recommendations -->
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Feedback Modal -->
+  <div class="modal-backdrop hidden" id="feedbackModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Video Feedback</h3>
+        <button id="closeFeedbackModal" class="btn-close" aria-label="Close">&times;</button>
+      </div>
+      <p class="modal-desc">
+        Select a structured feedback category. Your input automatically applies a safe, predefined adjustment instruction for subsequent regenerations.
+      </p>
+
+      <form id="feedbackForm">
+        <div class="form-group">
+          <label class="form-label" for="feedbackCategorySelect">Feedback Category</label>
+          <select id="feedbackCategorySelect" class="form-select" required>
+            <option value="" disabled selected>-- Select a category --</option>
+            <option value="pacing">pacing</option>
+            <option value="narration clarity">narration clarity</option>
+            <option value="visual style">visual style</option>
+            <option value="too long/too short">too long/too short</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+
+        <div class="adjustment-preview-box">
+          <div class="preview-label">Applied System Directive:</div>
+          <div class="preview-text" id="adjustmentPreviewText">
+            Select a category above to inspect its predefined adjustment prompt.
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="cancelFeedbackBtn" class="btn-action btn-outline">Cancel</button>
+          <button type="submit" id="submitFeedbackBtn" class="btn-action btn-primary">Submit Feedback</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Generation Status & Progress Modal -->
+  <div class="modal-backdrop hidden" id="generationModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">AI Video Generation Pipeline</h3>
+      </div>
+      <p class="modal-desc" id="genModalDesc">
+        Generating fresh structured shot list and visual assets for Arrays...
+      </p>
+
+      <div class="generation-progress-box">
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="genProgressFill" style="width: 10%;"></div>
+        </div>
+        <div class="progress-steps" id="genProgressSteps">
+          <div class="step-item active" data-step="QUEUED">1. Queued</div>
+          <div class="step-item" data-step="GENERATING_SCRIPT">2. Script</div>
+          <div class="step-item" data-step="GENERATING_VISUALS">3. Visuals</div>
+          <div class="step-item" data-step="GENERATING_AUDIO">4. Audio</div>
+          <div class="step-item" data-step="ASSEMBLING">5. Assembling</div>
+        </div>
+      </div>
+
+      <div class="gen-status-text" id="genStatusText">
+        Status: Initializing job...
+      </div>
+
+      <div id="genErrorAlert" class="error-banner hidden"></div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "topic": "Arrays",
+  "title": "Array Data Structure",
+  "summary": "An array is a fundamental linear data structure that stores elements of the same type in contiguous memory locations under a single variable name.",
+  "concepts": {
+    "What is an Array?": {
+      "definition": "A collection of items stored at contiguous memory locations, identifiable by indices.",
+      "key_points": [
+        "Elements are placed side by side in memory without gaps.",
+        "Provides predictable memory layout and cache friendliness.",
+        "Analogy: A numbered row of storage lockers or passenger train compartments.",
+        "Programming example: let scores = [85, 92, 78, 95];"
+      ],
+      "visual_cues": "Row of connected boxes, locker doors with labels, memory block visualization."
+    },
+    "Index-Based Access": {
+      "definition": "Accessing any array element directly using its numerical position, starting from index 0.",
+      "key_points": [
+        "Zero-based indexing: the first item is at index 0 because offset from the start is zero.",
+        "Direct access formula: memory address = base_address + (index * element_size).",
+        "Instant time complexity: O(1) constant time access.",
+        "Programming example: let first = scores[0];"
+      ],
+      "visual_cues": "Index tags below each cell, pointer jumping directly to index without inspecting earlier cells."
+    },
+    "Insertion": {
+      "definition": "Adding a new element into the array at the start, end, or a specific middle index.",
+      "key_points": [
+        "Inserting at the end is instant if space permits.",
+        "Inserting in the middle requires shifting existing items to the right to open a spot.",
+        "Worst-case time complexity: O(n) when inserting at the beginning due to shifting all items.",
+        "Resulting array increases in logical length by one."
+      ],
+      "visual_cues": "New element descending, elements sliding right sequentially, element settling into vacant cell."
+    },
+    "Deletion": {
+      "definition": "Removing an element from a specific index in the array.",
+      "key_points": [
+        "Removing an element leaves a vacant space that must be filled.",
+        "Subsequent elements shift left by one position to maintain contiguous storage.",
+        "Time complexity: O(n) for front/middle deletion, O(1) for removing the last item.",
+        "Resulting array decreases in logical length by one."
+      ],
+      "visual_cues": "Target cell fading out, remaining elements sliding left to close gap, cleaned-up array."
+    },
+    "Traversal": {
+      "definition": "Visiting every element of an array sequentially from start to finish.",
+      "key_points": [
+        "Iterates from index 0 to length - 1 using a loop.",
+        "Used for reading values, calculating sums, or updating elements.",
+        "Time complexity: O(n) because each of the n elements is visited once.",
+        "Programming example: for(let i = 0; i < scores.length; i++) { print(scores[i]); }"
+      ],
+      "visual_cues": "Active scanning highlight traveling smoothly from left to right, inspecting each value."
+    },
+    "Search": {
+      "definition": "Finding the location of a target value within the array.",
+      "key_points": [
+        "Linear search inspects elements one by one starting from index 0.",
+        "If target matches, the search halts and returns the matching index.",
+        "If the end of array is reached without a match, returns not found (-1).",
+        "Time complexity: O(n) in worst case (element at end or absent)."
+      ],
+      "visual_cues": "Magnifying glass/target probe comparing each box to target; green checkmark on match or red indicator on finish."
+    }
+  }
+}

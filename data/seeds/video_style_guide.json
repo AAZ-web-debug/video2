@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "target_duration": {
+    "min_seconds": 60,
+    "max_seconds": 90,
+    "target_average_seconds": 75
+  },
+  "shot_metrics": {
+    "target_shot_count_min": 8,
+    "target_shot_count_max": 10,
+    "average_shot_duration_seconds": 8.65,
+    "min_shot_duration_seconds": 6,
+    "max_shot_duration_seconds": 12
+  },
+  "narration_style": {
+    "standard": "simple but not weak",
+    "tone": "calm, clear, instructional, encouraging, authoritative",
+    "sentence_count_per_shot": "1 to 2 sentences",
+    "word_count_per_shot": "14 to 26 words",
+    "prohibited": [
+      "comedic slang",
+      "childish tone",
+      "sarcasm",
+      "filler intros",
+      "unexplained jargon"
+    ]
+  },
+  "voice_style": {
+    "pacing": "steady, articulate, 2.4 words per second",
+    "character": "calm, instructional narrator",
+    "persona": "Ada, AlgoVerse Guide"
+  },
+  "pacing_rules": {
+    "beats": [
+      {
+        "beat": 1,
+        "name": "Setup & Motivation",
+        "shots": "1-2",
+        "description": "Establish the real-world scenario or core computational problem."
+      },
+      {
+        "beat": 2,
+        "name": "Structural Mechanics",
+        "shots": "3-4",
+        "description": "Show memory layout, contiguous cells, indexing, or physical analogy."
+      },
+      {
+        "beat": 3,
+        "name": "Active Demonstration",
+        "shots": "5-7",
+        "description": "Step through the algorithm, element shifts, pointers, or code execution."
+      },
+      {
+        "beat": 4,
+        "name": "Synthesis & Complexity",
+        "shots": "8-9",
+        "description": "State Big-O time complexity and summarize key invariant rule."
+      }
+    ]
+  },
+  "feedback_adjustments": {
+    "pacing": "Improve pacing by shortening slow shots and increasing visual changes between concept beats.",
+    "narration clarity": "Use simpler wording, shorter sentences, and explain technical terms before using them.",
+    "visual style": "Keep the existing character reference and shared palette while making visuals clearer and more consistent.",
+    "too long/too short": "Adjust the number and duration of shots while keeping the final video between 60 and 90 seconds.",
+    "other": "Refine the overall instructional flow, keeping the explanation calm, clear, and strictly aligned with the style guide."
+  }
+}

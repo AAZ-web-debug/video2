@@ -1,0 +1,368 @@
+[
+  {
+    "video_id": "arrays-what-is-an-array",
+    "topic": "Arrays",
+    "concept": "What is an Array?",
+    "title": "Understanding Arrays: The Foundation of Linear Data Structures",
+    "target_duration_seconds": 75,
+    "shots": [
+      {
+        "shot_number": 1,
+        "visual_description": "Ada stands beside a wide digital workbench as four scattered data cards float into view with disorganized numbers.",
+        "narration_text": "When we work with multiple related values in code, keeping them scattered makes tracking them inefficient.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 2,
+        "visual_description": "A single continuous memory strip appears on the workbench, divided into four consecutive numbered compartments.",
+        "narration_text": "An array solves this by organizing elements in a contiguous block of memory, placed side by side.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 3,
+        "visual_description": "A cutaway view shows computer RAM highlighting four adjacent memory cells lighting up with addresses 1000, 1004, 1008, and 1012.",
+        "narration_text": "Because the items sit adjacent to one another in physical RAM, the computer can locate the entire group under one single variable name.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 4,
+        "visual_description": "A real-world illustration fades in showing a modern passenger train with numbered carriages attached in unbroken sequence.",
+        "narration_text": "Think of an array like a passenger train: each car holds one item, and every car is linked in an unbroken, predictable line.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 5,
+        "visual_description": "Ada gestures to the array boxes as values 85, 92, 78, and 95 slide smoothly into boxes 0, 1, 2, and 3.",
+        "narration_text": "Every cell in a typical array stores values of the same type, such as integer test scores.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 6,
+        "visual_description": "A clean code terminal floats above showing: let scores = [85, 92, 78, 95]; with syntax highlighting matching the visual boxes.",
+        "narration_text": "In our program, we declare this collection once as scores, creating four structured slots ready for immediate use.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 7,
+        "visual_description": "A magnifying sensor glides across the contiguous cells, showing zero gaps and predictable memory boundary lines.",
+        "narration_text": "Because there are no gaps between cells, modern processors can preload adjacent array values into cache memory very quickly.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 8,
+        "visual_description": "A diagram compares the orderly array sequence against scattered memory pointers, emphasizing stability.",
+        "narration_text": "This orderly layout provides predictable performance and forms the backbone of countless algorithms.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 9,
+        "visual_description": "Ada steps forward with a summary panel listing: Contiguous Memory, Single Identifier, Homogeneous Elements.",
+        "narration_text": "An array is a fixed-size sequence of elements stored consecutively in memory, giving our data structure and order.",
+        "duration_seconds": 8
+      }
+    ]
+  },
+  {
+    "video_id": "arrays-index-based-access",
+    "topic": "Arrays",
+    "concept": "Index-Based Access",
+    "title": "Index-Based Access: How Computers Locate Array Elements Instantly",
+    "target_duration_seconds": 70,
+    "shots": [
+      {
+        "shot_number": 1,
+        "visual_description": "Ada points to an array of five blue memory cells containing values 14, 28, 35, 42, and 56.",
+        "narration_text": "To retrieve an element from an array, we do not need to inspect every item from the beginning.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 2,
+        "visual_description": "Numerical tags 0, 1, 2, 3, and 4 light up underneath the corresponding cells from left to right.",
+        "narration_text": "Instead, each cell is assigned a zero-based index representing its exact position.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 3,
+        "visual_description": "A visual callout zooms into the first cell at index 0, showing an offset arrow of length zero from the start boundary.",
+        "narration_text": "We start counting at zero because the first item has an offset of zero steps from the start of the array.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 4,
+        "visual_description": "A memory calculation overlay shows: address = base_address + (index * 4 bytes). Cell 2 illuminates instantly.",
+        "narration_text": "To find element at index two, the computer multiplies two by the item size and jumps straight to that memory address.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 5,
+        "visual_description": "A clean code snippet displays: let value = scores[2]; followed by the value 35 popping out of cell 2.",
+        "narration_text": "In code, writing scores at index two gives us the value thirty-five immediately.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 6,
+        "visual_description": "A digital stopwatch icon shows O(1) time complexity as pointers jump directly to index 0, index 4, and index 1 without steps in between.",
+        "narration_text": "Whether an array holds five items or five million, jumping directly to any index takes the same single calculation.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 7,
+        "visual_description": "Ada smiles beside a glowing O(1) Constant Time badge as the array pulses with instant access indicators.",
+        "narration_text": "This constant time lookup, known as O of one, makes index-based access one of the fastest operations in computer science.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 8,
+        "visual_description": "Summary graphic highlights zero-based index labels and the direct formula: Base Address plus Index times Size.",
+        "narration_text": "Zero-based indexing turns memory lookup into simple arithmetic, providing instantaneous access to any element.",
+        "duration_seconds": 8
+      }
+    ]
+  },
+  {
+    "video_id": "arrays-insertion",
+    "topic": "Arrays",
+    "concept": "Insertion",
+    "title": "Array Insertion: Adding Elements and the Cost of Shifting",
+    "target_duration_seconds": 80,
+    "shots": [
+      {
+        "shot_number": 1,
+        "visual_description": "Ada stands next to an array with four active elements [10, 20, 30, 40] and one vacant slot at the end.",
+        "narration_text": "Inserting a new element into an array means placing data into a specific position while keeping memory contiguous.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 2,
+        "visual_description": "A new card with value 50 floats directly into the vacant slot at index 4 without disturbing the other cells.",
+        "narration_text": "When we insert at the end of an array that has available capacity, the item drops into place immediately.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 3,
+        "visual_description": "A new card with value 25 hovers above index 2, between values 20 and 30. A collision warning icon blinks gently.",
+        "narration_text": "However, inserting into the middle or beginning of an array presents a physical challenge.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 4,
+        "visual_description": "Animated arrows show value 40 sliding right into the vacant slot, followed by value 30 sliding right into index 3.",
+        "narration_text": "Because array cells cannot overlap, every element to the right of the target position must shift one spot to the right.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 5,
+        "visual_description": "Cell at index 2 is now clear and highlighted in glowing cyan as card 25 smoothly glides down into place.",
+        "narration_text": "Once the space at index two is open, our new value twenty-five seats firmly into the vacated compartment.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 6,
+        "visual_description": "The completed array [10, 20, 25, 30, 40] glows with updated indices 0 through 4.",
+        "narration_text": "The resulting array remains perfectly contiguous, with the total number of elements increased by one.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 7,
+        "visual_description": "A worst-case scenario animation shows insertion at index 0 where all five elements must shift right step by step.",
+        "narration_text": "In the worst case, inserting at index zero forces every single existing element to shift, taking O of n time.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 8,
+        "visual_description": "Ada displays a split comparison: End insertion is O(1), Middle/Front insertion requires element shifts O(n).",
+        "narration_text": "Remember: end insertion is instantaneous, but middle insertion requires shifting elements to preserve memory continuity.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 9,
+        "visual_description": "Summary checklist flashes: Contiguous Memory Maintained, Right Shifts Required, Length Increments by One.",
+        "narration_text": "Understanding element shifting helps you anticipate when an array insertion is efficient and when it carries extra work.",
+        "duration_seconds": 8
+      }
+    ]
+  },
+  {
+    "video_id": "arrays-deletion",
+    "topic": "Arrays",
+    "concept": "Deletion",
+    "title": "Array Deletion: Removing Values and Closing the Gap",
+    "target_duration_seconds": 75,
+    "shots": [
+      {
+        "shot_number": 1,
+        "visual_description": "Ada presents an array containing five numbers [12, 24, 36, 48, 60] with indices 0 through 4 clearly labeled.",
+        "narration_text": "Deleting an element removes a value from the array, but arrays cannot leave empty holes in memory.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 2,
+        "visual_description": "The card at index 1 with value 24 turns translucent and lifts out of the array, leaving an empty vacant slot.",
+        "narration_text": "Suppose we delete the element at index one. The value twenty-four is removed, creating a void in our sequence.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 3,
+        "visual_description": "A hazard symbol pulses over the empty cell at index 1, emphasizing broken continuity.",
+        "narration_text": "Because an array must remain contiguous, this empty gap violates the rules of the data structure.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 4,
+        "visual_description": "Animated blue arrows show value 36 sliding left from index 2 into index 1, then value 48 sliding into index 2, and 60 into index 3.",
+        "narration_text": "To repair the continuity, every element to the right of the deleted item shifts left by one position.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 5,
+        "visual_description": "The gap is fully closed, and the trailing unused slot at the end is cleared and marked as inactive.",
+        "narration_text": "The trailing position at the end is cleared, and the array length is officially reduced by one.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 6,
+        "visual_description": "The updated array [12, 36, 48, 60] glows steadily with indices renumbered 0, 1, 2, and 3.",
+        "narration_text": "The remaining values now form an unbroken, contiguous sequence ready for subsequent operations.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 7,
+        "visual_description": "Ada illustrates deleting the last element [60] directly without any shifting needed, showing O(1) time badge.",
+        "narration_text": "Deleting the last element requires no shifts at all, running in O of one constant time.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 8,
+        "visual_description": "A time complexity gauge highlights deleting the first element: shifting all n elements left requires O(n) linear time.",
+        "narration_text": "However, removing the first element requires shifting every remaining item, making front deletion an O of n operation.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 9,
+        "visual_description": "Ada concludes with a key takeaway card: Deletion removes data, left shifts restore order, array size decrements.",
+        "narration_text": "Deleting from an array always requires closing the gap through left shifting to preserve contiguous memory.",
+        "duration_seconds": 8
+      }
+    ]
+  },
+  {
+    "video_id": "arrays-traversal",
+    "topic": "Arrays",
+    "concept": "Traversal",
+    "title": "Array Traversal: Iterating Through Elements Sequentially",
+    "target_duration_seconds": 72,
+    "shots": [
+      {
+        "shot_number": 1,
+        "visual_description": "Ada stands before an array of six temperatures [68, 72, 75, 71, 69, 74] lined up in clean digital cells.",
+        "narration_text": "Traversal means visiting every element in an array one by one in a systematic order.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 2,
+        "visual_description": "A glowing cursor pointer labeled 'i = 0' points to the first cell containing value 68.",
+        "narration_text": "We begin at index zero, initializing our loop counter to point to the first compartment.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 3,
+        "visual_description": "The cursor smoothly steps from cell 0 to cell 1, then cell 2, each cell glowing cyan as it is read.",
+        "narration_text": "On each step of the loop, our program inspects the current value, performs an action, and advances the pointer.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 4,
+        "visual_description": "A code window displays: for (let i = 0; i < arr.length; i++) { process(arr[i]); } with active line highlighting.",
+        "narration_text": "This standard loop continues advancing as long as the index is strictly less than the total array length.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 5,
+        "visual_description": "A running total counter updates dynamically above the array: 68 + 72 + 75 + 71 + 69 + 74 = 429.",
+        "narration_text": "Traversal is essential for tasks like computing sums, formatting output, or filtering matching items.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 6,
+        "visual_description": "The pointer reaches index 5, processes 74, and pauses at the final boundary without stepping out of bounds.",
+        "narration_text": "Once the final valid index is processed, the loop condition evaluates to false and iteration stops gracefully.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 7,
+        "visual_description": "A timeline metric appears displaying Linear Time Complexity: O(n), where n equals the number of elements.",
+        "narration_text": "Because each of the n elements is visited exactly once, array traversal has a time complexity of O of n.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 8,
+        "visual_description": "Ada points to a summary card showing: Start at 0, Advance Sequentially, Stop at Length minus 1.",
+        "narration_text": "Traversal is the foundational pattern behind searching, sorting, and transforming array data.",
+        "duration_seconds": 9
+      }
+    ]
+  },
+  {
+    "video_id": "arrays-search",
+    "topic": "Arrays",
+    "concept": "Search",
+    "title": "Searching an Array: Linear Search and Element Discovery",
+    "target_duration_seconds": 78,
+    "shots": [
+      {
+        "shot_number": 1,
+        "visual_description": "Ada stands next to an unsorted array of numbers [45, 12, 89, 34, 67, 23] with a target display showing Target = 34.",
+        "narration_text": "Searching an array means locating the exact index of a target value or determining if it exists at all.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 2,
+        "visual_description": "A digital search probe hovers over index 0 containing 45. A red 'Not Equal' symbol flashes softly.",
+        "narration_text": "In a linear search, we check elements one by one starting at index zero, comparing each value to our target.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 3,
+        "visual_description": "The probe moves to index 1 containing 12. A comparison check shows: 12 is not equal to 34, so the probe advances.",
+        "narration_text": "If the current item does not match our target, the search pointer advances to the next cell.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 4,
+        "visual_description": "The probe checks index 2 with value 89. Another mismatch triggers advancement to index 3.",
+        "narration_text": "We continue this systematic check across the array until we either find a match or run out of cells.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 5,
+        "visual_description": "The probe arrives at index 3 containing 34. The cell lights up in brilliant emerald green with a checkmark.",
+        "narration_text": "At index three, the value matches our target of thirty-four. The search immediately halts and returns index three.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 6,
+        "visual_description": "A second scenario appears with Target = 99. The probe rapidly sweeps from index 0 all the way to index 5 without finding 99.",
+        "narration_text": "Now consider searching for ninety-nine. The probe inspects every cell from start to finish without finding a match.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 7,
+        "visual_description": "An indicator shows: 'Target Not Found: Returned -1' as the probe exits the array boundary.",
+        "narration_text": "When the end of the array is reached with no match, the algorithm returns minus one to signal that the item is absent.",
+        "duration_seconds": 9
+      },
+      {
+        "shot_number": 8,
+        "visual_description": "A complexity chart compares best-case O(1) when target is at index 0 against worst-case O(n) when target is at the end or missing.",
+        "narration_text": "Linear search takes O of one time in the best case, and O of n in the worst case when scanning unsorted data.",
+        "duration_seconds": 8
+      },
+      {
+        "shot_number": 9,
+        "visual_description": "Ada steps forward with the Linear Search rule: Check Each Cell, Halt on Match, Return Negative One if Missing.",
+        "narration_text": "Linear search is dependable and requires no sorted order, serving as the simplest search algorithm in computer science.",
+        "duration_seconds": 8
+      }
+    ]
+  }
+]

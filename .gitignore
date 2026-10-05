@@ -1,0 +1,7 @@
+node_modules/
+data/temp/
+data/*.db-shm
+data/*.db-wal
+public/videos/generated/*
+!public/videos/generated/.gitkeep
+*.log
